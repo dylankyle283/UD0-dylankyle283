@@ -233,14 +233,7 @@ public String getPrintValue() {
 	 * @return String containing (print) value and suit, separated by a space
 	 */
 
-	public String getPrintCard() {
-		
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 7; j++){
-
-			}
-		}
-	}
+	
 	
 	/**
 	 * Checking for equality of Card objects, all instance variables exactly equal
