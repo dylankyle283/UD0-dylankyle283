@@ -28,7 +28,9 @@ public class Main {
 
 		Card[] cards = new Card[52];
 
+		//Card a = new Card();
 
+		//System.out.println(a.getPrintCard());
 		int cardIndex = 0;
 		for (int i = 0; i < suits.length; i++) {
 			for (int j = 1; j <= 13; j++) {

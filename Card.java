@@ -258,6 +258,21 @@ public String getPrintValue() {
 	/**
 	 * Prints card ASCII art to console (see {@link #getPrintCard()})
 	 */
+
+	public String getPrintCard() {
+		String top = "-----------";
+		String valueStr = getPrintValue();
+		String suitStr = String.valueOf(suit);
+
+		return top + "\n"
+				+ "| " + suitStr + "     " + suitStr + " |\n"
+				+ "|         |\n"
+				+ "|    " + valueStr + "    |\n"
+				+ "|         |\n"
+				+ "| " + suitStr + "     " + suitStr + " |\n"
+				+ top;
+	}
+
 	public void printCard() {
 		System.out.println("test");
 	}
