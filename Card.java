@@ -80,6 +80,10 @@ static final char DEFAULT_SUIT = '♥';
 	 *              spade, or club)
 	 */
 	public Card(int val, char suit) {
+		if (val < 1 || val > 13 || (suit != HEART && suit != DIAMOND && suit != SPADE && suit != CLUB)) {
+			System.err.println("Error: Invalid card value or suit in constructor");
+			System.exit(1);
+		}
 		this.value = val;
 		this.suit = suit;
 	}
@@ -91,9 +95,13 @@ static final char DEFAULT_SUIT = '♥';
 	 * @param original Card object to be copied
 	 */
 	Card(Card original) {
-        this.value = original.value;
-        this.suit = original.suit;
-    }
+		if (original == null || original.value < 1 || original.value > 13 || (original.suit != HEART && original.suit != DIAMOND && original.suit != SPADE && original.suit != CLUB)) {
+			System.err.println("Error: Invalid card data in copy constructor.");
+			System.exit(1);
+		}
+		this.value = original.value;
+		this.suit = original.suit;
+	}
 
 	/*** MUTATOR METHODS (SETTERS) ***/
 	/**
